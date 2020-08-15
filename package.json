@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/BartoshevichM/parse-excel/issues"
   },
-  "homepage": "https://github.com/BartoshevichM/parse-excel#readme"
+  "homepage": "https://github.com/BartoshevichM/parse-excel#readme",
+  "dependencies": {
+    "xlsx": "^0.16.5"
+  }
 }

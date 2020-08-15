@@ -46,3 +46,6 @@ database/dump/*
 # exception to the rule
 !database/dump/.gitkeep
 
+# file to test
+test.js
+
