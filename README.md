@@ -33,7 +33,7 @@ resArr =
     
 ```
     
- ### 2. Parce excel files (1 or more) from directory to array of JSON
+  ### 2. Parse excel files (1 or more) from directory to array of JSON
 
 
 ```bash
