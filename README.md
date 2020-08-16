@@ -2,6 +2,7 @@
 
 ### 1. Parse excel files (1 or more) from directory to array of javaScript objects
 
+
 ```bash
 const { parseAllObj } = require('parseexcel')
 const resArr = parseAllObj(directoryPath) 
@@ -34,6 +35,7 @@ resArr =
 ```
     
   ### 2. Parse excel files (1 or more) from directory to array of JSON
+
 
 
 ```bash
