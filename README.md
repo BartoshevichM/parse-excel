@@ -1,12 +1,14 @@
-Usage
+## Usage
 
-1. Parse excel files (1 or more) from directory to array of javaScript objects
+### 1. Parse excel files (1 or more) from directory to array of javaScript objects
 
+```bash
 const { parseAllObj } = require('parseexcel')
 const resArr = parseAllObj(directoryPath) 
+```
+result:
 
-//result:
-
+```bash
 resArr =
     [
     //excel file 1
@@ -29,8 +31,12 @@ resArr =
         ]
     ]
     
-    2. Parce excel files (1 or more) from directory to array of JSON
+```
+    
+ ### 2. Parce excel files (1 or more) from directory to array of JSON
 
+
+```bash
 const { parseAllJson } = require('parseexcel')
 const resArr = parseAllJson(directoryPath) 
 
@@ -48,3 +54,4 @@ resArr =
     ]
 ]
 
+    ```
