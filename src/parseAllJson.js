@@ -1,8 +1,8 @@
 'use strict'
 
-const parseAllObj = require('./parseAllObj')
+const {_JSON} = require('../utils/constants')
+const parseAll = require('../utils/parseAll')
 
 module.exports = (directory) => {
-    let res = parseAllObj(directory)
-    return JSON.stringify(res)
+    return parseAll(directory, _JSON)
 }

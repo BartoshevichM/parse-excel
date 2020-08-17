@@ -1,6 +1,7 @@
 'use strict'
 
 const xlsx = require('xlsx')
+const {_JSON, _OBJ} = require('./constants')
 
 const _getObject = (columsArr, row) => {
     let obj = {}
@@ -11,7 +12,7 @@ const _getObject = (columsArr, row) => {
 }
 
 module.exports = {
-    _readFile(tabNames, xlsxFile) {
+    _readFile(tabNames, xlsxFile, type) {
         for (let tab of tabNames) {
             const _res = []
             const _currentTab = xlsxFile.Sheets[tab]
@@ -31,7 +32,14 @@ module.exports = {
                 for (let [index, row] of rowsArr.entries()) {
                     if (index > 0) {
                         const obj = _getObject(_columnNames, row)
-                        _res.push(obj)
+                        switch (type) {
+                            case _OBJ:
+                                _res.push(obj)
+                                break
+                            case _JSON:
+                                _res.push(JSON.stringify(obj))
+                                break
+                        }
                     }
                 }
             }
