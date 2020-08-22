@@ -56,4 +56,15 @@ resArr =
     ]
 ]
 
-    ```
+   ```
+
+ ### 3. Parse Async excel files (1 or more) from directory to array of javaScript objects
+```bash
+const { parseAllObjAsync } = require('parseexcel')
+const resArr = await parseAllObjAsync(directoryPath) 
+```
+ ### 4. Parse Async excel files (1 or more) from directory to array of JSON
+```bash
+const { parseAllJsonAsync } = require('parseexcel')
+const resArr = await parseAllJsonAsync(directoryPath) 
+```
