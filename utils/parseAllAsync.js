@@ -13,7 +13,6 @@ module.exports = (directory, type) => {
                 if (_fileNames) {
                     let _res = []
                     for (let fileName of _fileNames) {
-                        console.log('here: ', fileName)
                         const xlsxFile = xlsx.readFile(`${directory}${fileName}`, {type: 'binary'})
                         const _tabNames = xlsxFile.SheetNames
                         const data = _readFile(_tabNames, xlsxFile, type)

@@ -1,8 +1,7 @@
 'use strict'
 
-const xlsx = require('xlsx')
 const fs = require('fs')
-const {_readFile} = require('./common')
+const parse = require('./parse')
 
 module.exports = (directory, type) => {
     const _fileNames = fs.readdirSync(directory)
@@ -10,9 +9,7 @@ module.exports = (directory, type) => {
     if (_fileNames) {
         let _res = []
         for (let fileName of _fileNames) {
-            const xlsxFile = xlsx.readFile(`${directory}${fileName}`, {type: 'binary'})
-            const _tabNames = xlsxFile.SheetNames
-            const data = _readFile(_tabNames, xlsxFile, type)
+            const data = parse(`${directory}${fileName}`, type)
             data.length ? _res.push(data) : ''
         }
         return _res
