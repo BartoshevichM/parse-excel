@@ -11,6 +11,10 @@ const _getObject = (columsArr, row) => {
     return obj
 }
 
+//check if last symbol is slash
+const _checkDirectory = dir => /(\\|\/)$/.test(dir) ? dir : `${dir}${_getSysSeparator()}`
+const _getSysSeparator = () => /^win/.test(process.platform) ? '\\' : '/'
+
 module.exports = {
     _readFile(tabNames, xlsxFile, type) {
         for (let tab of tabNames) {
@@ -45,5 +49,6 @@ module.exports = {
             }
             return _res
         }
-    }
+    },
+    _checkDirectory
 }

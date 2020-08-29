@@ -2,8 +2,10 @@
 
 const fs = require('fs')
 const parse = require('./parse')
+const { _checkDirectory } = require('./common')
 
 module.exports = (directory, type) => {
+    directory = _checkDirectory(directory)
     const _fileNames = fs.readdirSync(directory)
 
     if (_fileNames) {

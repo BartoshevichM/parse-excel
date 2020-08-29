@@ -2,10 +2,11 @@
 
 const xlsx = require('xlsx')
 const fs = require('fs')
-const {_readFile} = require('./common')
+const {_readFile, _checkDirectory} = require('./common')
 
 module.exports = (directory, type) => {
     return new Promise((resolve, reject) => {
+        directory = _checkDirectory(directory)
         fs.readdir(directory, (err, _fileNames) => {
             if (err)
                 reject(err);
