@@ -8,9 +8,9 @@
 
 ### 1. Parse excel file by path to array of javaScript objects
 ```bash
-const { parseObjc } = require('parseexcel')
+const { parseObj } = require('parseexcel')
 
-const resArr = parseObjc(filePath)
+const resArr = parseObj(filePath)
 ```
 
 ### Result:

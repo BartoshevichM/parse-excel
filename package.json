@@ -1,6 +1,6 @@
 {
   "name": "parseexcel",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Parse excel file by path or all files from directory to javaScript objects or to JSON",
   "main": "index.js",
   "scripts": {
